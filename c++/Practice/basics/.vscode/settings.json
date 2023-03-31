@@ -1,0 +1,10 @@
+{
+  "C_Cpp.errorSquiggles": "Disabled",
+  "cSpell.words": [
+    "Brijesh"
+  ],
+  "files.associations": {
+    "ostream": "cpp",
+    "fstream": "cpp"
+  }
+}

@@ -1,0 +1,104 @@
+ THIS POINTER
+	this key word refers to the instance of the class.
+	* it can be used to pass current obj as a parameter to another method.
+	* it can be used to refer currebt class instance variable.
+	* it can be used to declare indexers.
+
+Syntax
+   this->x=x;
+--------------------------------------------------------------------------------------------
+					<<<<EXAMPLE>>>>
+class test{
+         
+    private:
+       int x;
+    public:
+      test(int x=0)
+      {
+          this->x=x;
+      }
+      void change(test *t)
+      {
+        // this=t;
+          // t=this;
+        
+      }
+      void display()
+      {
+        cout<<endl<<x<<endl;
+      }
+
+};
+
+class test2
+{
+    private:
+      int x,y;
+    public:
+     test2(int x=0,int y=0)
+    {
+      this->x=x;
+      this->y=y;
+    }
+
+    // void fun1()
+    // {
+    //      cout<<"\nIn func one \n";
+    // }
+    // void fun2()
+    // {
+    //   cout<<"\nIn func two\n";
+    //   this->fun1();
+    // }
+    
+    // test2 setX(int a)
+    // {
+    //   x=a;
+    //   return *this;
+
+    // }
+    // test2 setY(int b)
+    // {
+    //   y=b;
+    //   return *this;
+    // }
+
+     void setXY(int a,int b)
+     {
+        x=a;
+        y=b;
+     }
+     void destroy()
+     {
+      delete this;
+     }
+
+
+    void print()
+    {
+      cout<<"\n X ="<<x<<endl<<"Y = "<<y<<endl;
+    }
+
+
+};
+
+int main()
+{
+    //  test t(5);
+    // test *ptr=new test(10);
+    test *t =new test(10);
+    // t.change(ptr);
+
+      t->display();
+   cout<<endl;
+
+  //  test2 t2;
+  //  t2.fun2();
+
+   test2 obj;
+  //  obj.setX(10).setY(20);
+     obj.setXY(20,78);
+    obj.destroy();
+    obj.print();
+  return 0;
+}
